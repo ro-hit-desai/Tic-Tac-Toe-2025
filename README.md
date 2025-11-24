@@ -103,6 +103,9 @@ graph TB
 ---
 
  ## 🌟 Core Framework & Languages
+Kotlin Multiplatform enables full code sharing across platforms with native performance and seamless interoperability.
+Jetpack Compose Multiplatform provides a declarative, cross-platform UI with hot reload and Material 3 support, built using Android Gradle Plugin for modern build tooling and version management.
+
 | Component                          | Version | Purpose        | Key Features                                                               |
 |------------------------------------|---------|----------------|----------------------------------------------------------------------------|
 | **Kotlin Multiplatform**           | 2.0.21  | Core Language  | • 100% Code Sharing<br>• Platform Native Performance<br>• Interoperability |
@@ -112,6 +115,8 @@ graph TB
 
 
 ## 🏗️ Dependency Injection
+Koin provides a lightweight, Kotlin-native dependency injection framework for Android and Compose.
+It allows easy declaration of singletons, Android integration, and Compose-specific injection with minimal boilerplate.
 
 | Library        | Version | Role                 | Implementation                  |
 |----------------|---------|----------------------|----------------------------------|
@@ -133,6 +138,8 @@ val appModule = module {
 
 
 ## 🎨 UI & Graphics Stack
+Compose Multiplatform provides a declarative UI framework for building responsive and reusable components across platforms.
+It includes state management, layouts, Material 3 design system, custom components, and resource handling for modern, cross-platform UIs.
 
 ### Compose Multiplatform Components
 
@@ -146,6 +153,9 @@ val appModule = module {
 
 
 # 🎨 Custom Canvas Rendering
+BoardCanvas is a Composable that renders the game board using a custom Canvas with scalable cell size.
+It draws grid lines, X/O symbols, and highlights winning positions, providing a fully interactive and visually clear game interface.
+
 ```kotlin
 @Composable
 fun BoardCanvas(
@@ -164,6 +174,9 @@ fun BoardCanvas(
 ---
 
 ## 🔄 Asynchronous Programming
+Kotlinx Coroutines enables efficient asynchronous programming with structured concurrency for Kotlin applications.
+It provides core coroutine support, seamless async operations, and integration with desktop platforms like Swing for responsive UIs.
+
 ### Coroutines Stack
 
 | Library                | Version | Purpose             |
@@ -175,6 +188,8 @@ fun BoardCanvas(
 ---
 
 ### 🎭 Structured Concurrency (Koin Module)
+This Koin module sets up structured concurrency with a centralized CoroutineExceptionHandler for global error handling.
+It provides a CoroutineScope with a SupervisorJob, ensuring safe, isolated, and manageable asynchronous tasks across the app.
 
 ```kotlin
 val coroutineModule = module {
@@ -193,6 +208,8 @@ val coroutineModule = module {
 ---
 
 ## 🌐 Networking & Serialization
+Ktor Client provides a multiplatform HTTP client with flexible engines for Android, JVM, and iOS.
+It supports JSON serialization, logging, and authentication, enabling robust and maintainable network communication across platforms.
 
 ### Ktor Client Stack
 
@@ -231,6 +248,8 @@ coil = [
 ---
 
 ## 💾 Data Persistence
+Room Database provides a robust ORM for Kotlin, offering SQLite abstraction with compile-time query verification.
+It integrates code generation, multiplatform SQLite support, and KSP validation for safe and efficient data persistence.
 
 ### Room Database Stack
 
@@ -246,6 +265,9 @@ coil = [
 }
 ```
 ## 🎯 Game-Specific Technologies
+GameEngine implements core game logic in pure Kotlin, handling board state and win conditions.
+It supports multi-directional checks—horizontal, vertical, and diagonal—ensuring platform-independent gameplay mechanics.
+
 ```kotlin
 class GameEngine {
     private val size = 10
@@ -262,6 +284,8 @@ class GameEngine {
 ---
 
 ## 📱 Platform Support Matrix
+The project supports Android, iOS, and Desktop, ensuring broad device compatibility with modern SDKs and build tools.
+It provides native frameworks for iOS, multiplatform installers for desktop (DMG, MSI, DEB), and optimized Android targets for seamless deployment.
 
 ### Android
 
@@ -295,6 +319,8 @@ class GameEngine {
 ---
 
 ## 🔧 Build & Development Tools
+Gradle Configuration leverages Kotlin Gradle Plugin, Compose Compiler, and KSP to streamline multiplatform builds.
+It enables efficient code generation, symbol processing, and seamless compilation for Kotlin and Compose projects.
 
 ### Gradle Configuration
 
